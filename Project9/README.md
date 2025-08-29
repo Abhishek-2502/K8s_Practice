@@ -25,7 +25,7 @@ minikube service apache-deployment --url
 kubectl delete service apache-deployment
 ```
 
-### Delete the Seployment
+### Delete the Deployment
 ```
 kubectl delete deployment apache-deployment
 ```
