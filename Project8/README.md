@@ -42,3 +42,6 @@ kubectl rollout restart deployment frontend-deploy -n microapp
 ```
 kubectl rollout status deployment/frontend-deploy -n microapp
 ```
+
+## Author
+- Abhishek Rajput
