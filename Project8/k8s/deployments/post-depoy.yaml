@@ -20,7 +20,7 @@ spec:
           image: abhi25022004/posts:1.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3000 
+            - containerPort: 8080
           readinessProbe:
             httpGet:
               path: /health

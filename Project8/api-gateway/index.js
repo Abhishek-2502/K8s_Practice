@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 
 app.get('/health', (req, res) => res.send('OK'));
 
-app.get('/users', async (req, res) => {
+app.get('/api/users', async (req, res) => {
   try {
     const r = await axios.get(`${USERS_URL}/users`);
     res.json(r.data);
@@ -20,7 +20,7 @@ app.get('/users', async (req, res) => {
   }
 });
 
-app.get('/posts', async (req, res) => {
+app.get('/api/posts', async (req, res) => {
   try {
     const r = await axios.get(`${POSTS_URL}/posts`);
     res.json(r.data);
