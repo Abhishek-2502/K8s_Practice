@@ -29,3 +29,5 @@ kubectl delete service apache-deployment
 ```
 kubectl delete deployment apache-deployment
 ```
+## Author
+- Abhishek Rajput
