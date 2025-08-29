@@ -1,5 +1,7 @@
 # Project 7: Create Mongo and Mongo Express deployments, services, configmaps, and secret.
 
+
+## Apply manifests:
 ```
 kubectl apply -f mongo-secret.yaml
 kubectl apply -f mongo-configmap.yaml

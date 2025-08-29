@@ -1,17 +1,17 @@
+# Project 8: Create deployments ,services,configmaps and secrets to containerize a complete application with at least 4 microservice
 ## Build images locally and push to registry (from project root):
 
-
 ```
-docker build -t abhi25022004/users:1.0 ./users
+docker build --no-cache -t abhi25022004/users:1.0 ./users
 docker push abhi25022004/users:1.0
 
-docker build -t abhi25022004/posts:1.0 ./posts
+docker build --no-cache -t abhi25022004/posts:1.0 ./posts
 docker push abhi25022004/posts:1.0
 
-docker build -t abhi25022004/api-gateway:1.0 ./api-gateway
+docker build --no-cache -t abhi25022004/api-gateway:1.0 ./api-gateway
 docker push abhi25022004/api-gateway:1.0
 
-docker build -t abhi25022004/frontend:1.0 ./frontend
+docker build --no-cache -t abhi25022004/frontend:1.0 ./frontend
 docker push abhi25022004/frontend:1.0
 ```
 
@@ -30,4 +30,15 @@ kubectl apply -R -f k8s/services -n microapp
 ## On Minikube, access frontend:
 ```
 minikube service frontend-svc -n microapp
+```
+
+## Other
+#### Restart the Kubernetes Deployment
+```
+kubectl rollout restart deployment frontend-deploy -n microapp
+```
+
+##### Verify the Rollout
+```
+kubectl rollout status deployment/frontend-deploy -n microapp
 ```

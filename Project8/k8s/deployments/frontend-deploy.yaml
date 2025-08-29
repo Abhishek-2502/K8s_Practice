@@ -18,7 +18,7 @@ spec:
       containers:
         - name: frontend
           image: abhi25022004/frontend:1.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always 
           ports:
             - containerPort: 80
           env:
